@@ -1,0 +1,89 @@
+body
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parent
+{
+    width: 400px;
+    height: 600px;
+    border: 6px solid rgb(0, 30, 75);
+    border-radius: 20px;
+    background-color: rgb(163, 43, 43);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 20px;
+}
+
+.header
+{
+    border-bottom: 4px solid rgb(0, 30, 75);
+    display: flex;
+    align-items: center;
+    background-color: rgb(239, 255, 12);
+    width: 100%;
+    justify-content: space-between;
+}
+
+img
+{
+    border-radius: 100%;
+    width: 45%;
+    height: 30%;
+    margin-top: 20%;
+}
+
+h1
+{
+    margin-left: 10px;
+}
+
+i
+{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+input
+{
+    width: 80%;
+    height: 5%;
+    border-radius: 10px;
+    border: none;
+}
+
+button
+{
+    width: 70%;
+    height: 7%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: black;
+    color: white;
+    transition: all 0.3s ease;
+}
+ 
+#close
+{
+    display: none;
+}
+
+body:has(#close:checked) .parent
+{
+    transform: translateY(1000px);
+}
+
+body:has(#close:checked) #close
+{
+    display: block;
+}
